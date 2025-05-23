@@ -4,8 +4,8 @@ set -e # Exit on error
 
 # Configuration variables
 output_dir="www/"
-deploy_server="user@server.com:path/to/"
 data_base="test"
+deploy_server="user@server.com:path/to/"
 rsync_options="-avz --delete --delete-excluded --exclude=.env.local --include=*.htaccess"
 compression_options="-t7z -mx=9 -m0=LZMA2 -mmt=on"
 
