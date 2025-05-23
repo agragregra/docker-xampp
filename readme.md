@@ -24,7 +24,7 @@ git clone https://github.com/agragregra/docker-xampp . && rm -rf trunk .git && c
 * ./run.sh args
 ```
 chmod +x ./run.sh
-Usage: ./run.sh { backup | bash | clear | deploy | down | prune | up }
+Usage: ./run.sh { backup | bash | deploy | down | prune | up }
 ```
 
 * import db
