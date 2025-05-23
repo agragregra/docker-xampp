@@ -5,6 +5,7 @@ set -e # Exit on error
 # Configuration variables
 output_dir="www/"
 deploy_server="user@server.com:path/to/"
+data_base="test"
 rsync_options="-avz --delete --delete-excluded --exclude=.env.local --include=*.htaccess"
 compression_options="-t7z -mx=9 -m0=LZMA2 -mmt=on"
 
@@ -30,7 +31,8 @@ run_prune() {
 
 # Service commands
 run_backup() {
-  check_deps "7z"
+  check_deps "7z" "docker-compose"
+  docker-compose exec xampp /opt/lampp/bin/mysqldump "$data_base" > backup.sql
   local dir_name="$(basename "$(pwd)")"
   local current_date=$(date +%d-%m-%Y)
   unlock_all
