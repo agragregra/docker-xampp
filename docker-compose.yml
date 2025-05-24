@@ -1,6 +1,7 @@
 services:
   xampp:
     image: tomsik68/xampp:8
+    platform: linux/amd64
     ports:
       - 80:80
       - 3306:3306
