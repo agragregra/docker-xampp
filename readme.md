@@ -11,7 +11,7 @@ git clone https://github.com/agragregra/docker-xampp . && rm -rf trunk .git && c
 - **MySQL**: Stable MySQL version.
 - **DB**: MySQLi & PDO.
 - **phpMyAdmin**: Stable version.
-- **Composer**.
+- **Composer** (uncomment "command").
 
 ## Server
   - ./www:/opt/lampp/htdocs

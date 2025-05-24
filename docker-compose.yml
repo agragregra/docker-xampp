@@ -10,7 +10,7 @@ services:
       - ./www:/opt/lampp/htdocs
       - mysql_data:/opt/lampp/var/mysql
     working_dir: /opt/lampp/htdocs
-    command: sh -c "curl -ksS https://getcomposer.org/installer | /opt/lampp/bin/php -- --install-dir=/usr/local/bin --filename=composer && ln -s /opt/lampp/bin/php /usr/local/bin/php && /opt/lampp/lampp start && sleep infinity"
+    # command: sh -c "curl -ksS https://getcomposer.org/installer | /opt/lampp/bin/php -- --install-dir=/usr/local/bin --filename=composer && ln -s /opt/lampp/bin/php /usr/local/bin/php && /opt/lampp/lampp start && sleep infinity"
 
 volumes:
   mysql_data:
