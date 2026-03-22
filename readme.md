@@ -28,12 +28,12 @@ Usage: ./run.sh { backup | bash | deploy | down | prune | up }
 
 * import db
 ```
-docker-compose exec -T xampp /opt/lampp/bin/mysql test < backup.sql
+docker compose exec -T xampp /opt/lampp/bin/mysql test < backup.sql
 ```
 
 * export db
 ```
-docker-compose exec xampp /opt/lampp/bin/mysqldump test > backup.sql
+docker compose exec xampp /opt/lampp/bin/mysqldump test > backup.sql
 ```
 
 ## Troubleshooting

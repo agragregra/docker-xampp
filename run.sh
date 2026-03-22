@@ -11,18 +11,18 @@ compression_options="-t7z -mx=9 -m0=LZMA2 -mmt=on"
 
 # Docker commands
 run_up() {
-  check_deps "docker-compose"
+  check_deps "docker"
   unlock_all
-  docker-compose up -d
+  docker compose up -d
 }
 run_down() {
-  check_deps "docker-compose"
+  check_deps "docker"
   unlock_all
-  docker-compose down
+  docker compose down
 }
 run_bash() {
-  check_deps "docker-compose"
-  docker-compose exec xampp bash
+  check_deps "docker"
+  docker compose exec xampp bash
 }
 run_prune() {
   check_deps "docker"
@@ -31,8 +31,8 @@ run_prune() {
 
 # Service commands
 run_backup() {
-  check_deps "7z" "docker-compose"
-  docker-compose exec xampp //opt//lampp//bin//mysqldump "$data_base" > backup.sql
+  check_deps "7z" "docker"
+  docker compose exec xampp //opt//lampp//bin//mysqldump "$data_base" > backup.sql
   local dir_name="$(basename "$(pwd)")"
   local current_date=$(date +%d-%m-%Y)
   unlock_all
