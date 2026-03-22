@@ -1,6 +1,6 @@
 # Docker XAMPP (PHP MySQL phpMyAdmin)
 Docker configuration for running PHP application with MySQL (MySQLi/PDO) and phpMyAdmin.
- 
+
 ## Clone
 ```
 git clone https://github.com/agragregra/docker-xampp . && rm -rf trunk .git readme.md && chmod +x run.sh
